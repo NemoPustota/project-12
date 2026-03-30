@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Insect Archive</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Courier New", monospace;
+      background-color: #000;
+      color: #00ff88;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 700px;
+      background: #001a00;
+      padding: 30px;
+      border: 2px solid #00ff88;
+      box-shadow: 0 0 20px rgba(0,255,100,0.2);
+      text-align: center;
+    }
+
+    .banner {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border: 1px solid #00ff88;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    .description {
+      font-size: 13px;
+      line-height: 1.5;
+      text-align: left;
+      margin-bottom: 25px;
+      border-top: 1px solid #00ff88;
+      border-bottom: 1px solid #00ff88;
+      padding: 10px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .grid button {
+      padding: 12px;
+      background: #002b00;
+      color: #00ff88;
+      border: 1px solid #00ff88;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .grid button:hover {
+      background: #004400;
+    }
+
+    /* Back button section */
+    .back-container {
+      margin-top: 25px;
+      border-top: 1px solid #00ff88;
+      padding-top: 15px;
+    }
+
+    .back-btn {
+      width: 100%;
+      background: #001a00;
+      color: #00ff88;
+      border: 1px solid #00ff88;
+      padding: 12px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+
+    .back-btn:hover {
+      background: #003300;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>INSECTSSSSSS</h1>
+
+  <!-- ?? Banner -->
+  <img src="banner.jpg" class="banner">
+
+  <!-- ?? Description -->
+  <div class="description">
+    Insects (from Latin insectum) are hexapod invertebrates of the class Insecta. 
+    They are the largest group within the arthropod phylum. Insects have a chitinous 
+    exoskeleton, a three-part body (head, thorax and abdomen), three pairs of jointed legs, 
+    compound eyes, and a pair of antennae. Insects are the most diverse group of animals, 
+    with more than a million described species; they represent more than half of all animal species.
+  </div>
+
+  <!-- ?? Buttons -->
+  <div class="grid">
+    <button onclick="go(1)">1</button>
+    <button onclick="go(2)">2</button>
+    <button onclick="go(3)">3</button>
+    <button onclick="go(4)">4</button>
+    <button onclick="go(5)">5</button>
+    <button onclick="go(6)">6</button>
+    <button onclick="go(7)">7</button>
+    <button onclick="go(8)">8</button>
+    <button onclick="go(9)">9</button>
+    <button onclick="go(10)">10</button>
+    <button onclick="go(11)">11</button>
+    <button onclick="go(12)">12</button>
+  </div>
+
+  <!-- ?? Back button -->
+  <div class="back-container">
+    <button class="back-btn" id="backBtn" onclick="goBack()">< Return to Archive</button>
+  </div>
+
+</div>
+
+<script>
+  function go(num) {
+    window.location.href = "bug" + num + ".html";
+  }
+
+  function goBack() {
+    window.location.href = "tabs.html";
+  }
+
+  // ? Dynamic hover text
+  const backBtn = document.getElementById("backBtn");
+
+  backBtn.addEventListener("mouseenter", function() {
+    this.textContent = "< Exit Section";
+  });
+
+  backBtn.addEventListener("mouseleave", function() {
+    this.textContent = "< Return to Archive";
+  });
+</script>
+
+</body>
+</html>
