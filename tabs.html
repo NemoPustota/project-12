@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Archive Sections</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Courier New", monospace;
+      background-color: #050505;
+      color: #e6e6e6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #0a0a0a;
+      padding: 60px;
+      border: 2px solid #2a2a2a;
+      border-radius: 10px;
+      width: 520px;
+      text-align: center;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      padding: 14px;
+      background: #111;
+      color: white;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    button:hover {
+      background: #222;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Archive Sections</h1>
+
+  <button onclick="go('bugs.html')">bugs</button>
+  <button onclick="go('spiders.html')">spiders</button>
+  <button onclick="go('error.html')">error</button>
+  <button onclick="go('weird.html')">::::-)</button>
+</div>
+
+<script>
+  function go(page) {
+    window.location.href = page;
+  }
+</script>
+
+</body>
+</html>

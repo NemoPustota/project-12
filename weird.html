@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Archive Fragment</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Courier New", monospace;
+      background-color: #050505;
+      color: #e6e6e6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #0a0a0a;
+      padding: 40px;
+      border: 2px solid #2a2a2a;
+      border-radius: 10px;
+      width: 600px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    }
+
+    h1 {
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .caption {
+      font-size: 13px;
+      opacity: 0.7;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    video {
+      width: 100%;
+      border: 1px solid #2a2a2a;
+      margin-bottom: 20px;
+    }
+
+    .controls button {
+      margin: 5px;
+      padding: 10px 16px;
+      background: #111;
+      color: #e6e6e6;
+      border: 1px solid #2a2a2a;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .controls button:hover {
+      background: #1c1c1c;
+      border-color: #444;
+    }
+
+    .signature {
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+
+    .return-btn {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background: #111;
+      border: 1px solid #2a2a2a;
+      color: white;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .return-btn:hover {
+      background: #222;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>yo i still LOVE this video</h1>
+  <div class="caption">Loading video file...</div>
+
+  <video id="myVideo">
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <div class="controls">
+    <button onclick="togglePlay()">Play / Pause</button>
+    <button onclick="toggleMute()">Mute / Unmute</button>
+  </div>
+
+  <div class="signature">
+    <p>I think it's pretty cool, no? Hi from Velvet ::::-)</p>
+    <p><strong>Zeta:</strong> Lame</p>
+    <p><strong>Velvet:</strong> I will revoke your right to leave comments here, dear "Zeta".</p>
+  </div>
+
+  <button class="return-btn" onclick="goBack()">Return</button>
+
+</div>
+
+<script>
+  const video = document.getElementById("myVideo");
+
+  function togglePlay() {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  }
+
+  function toggleMute() {
+    video.muted = !video.muted;
+  }
+
+  function goBack() {
+    window.location.href = "tabs.html";
+  }
+</script>
+
+</body>
+</html>
