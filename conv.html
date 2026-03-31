@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>some of y'alls uhm.... well, conversations.</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Courier New", monospace;
+      background: linear-gradient(135deg, #000814, #001d3d);
+      color: #a8d0ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: rgba(0, 10, 30, 0.9);
+      padding: 50px;
+      border: 1px solid #2a4f7a;
+      width: 420px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0, 100, 255, 0.2);
+    }
+
+    h1 {
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background: #000814;
+      border: 1px solid #2a4f7a;
+      color: #a8d0ff;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 12px;
+      background: #001d3d;
+      border: 1px solid #2a4f7a;
+      color: #a8d0ff;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    button:hover {
+      background: #003566;
+    }
+
+    #error {
+      margin-top: 15px;
+      color: #ff6b6b;
+      font-size: 14px;
+    }
+
+    .back-btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: #000814;
+      border: 1px solid #2a4f7a;
+      color: #a8d0ff;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .back-btn:hover {
+      background: #003566;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>some of y'alls uhm.... well, conversations.</h1>
+  <p>Enter conversation code. (At least it is a bit private since u seem sensitive abt it)</p>
+
+  <input type="password" id="password" placeholder="Code">
+  <button onclick="checkCode()">Enter</button>
+
+  <div id="error"></div>
+
+  <button class="back-btn" id="backBtn" onclick="goBack()">< Return to Archive</button>
+
+</div>
+
+<script>
+  function checkCode() {
+    const input = document.getElementById("password").value;
+    const error = document.getElementById("error");
+
+    const codes = {
+      "alpha": "conv1.html",
+      "beta": "conv2.html",
+      "gamma": "conv3.html"
+    };
+
+    if (codes[input]) {
+      window.location.href = codes[input];
+    } else {
+      error.textContent = "Incorrect code.";
+    }
+  }
+
+  function goBack() {
+    window.location.href = "tabs.html";
+  }
+
+  //text change
+  const backBtn = document.getElementById("backBtn");
+
+  setInterval(() => {
+    if (Math.random() < 0.3) {
+      backBtn.textContent = "< Exit Channel";
+    } else {
+      backBtn.textContent = "< Return to Archive";
+    }
+  }, 3000);
+</script>
+
+</body>
+</html>
