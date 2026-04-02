@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CLASSIFIED DOSSIER</title>
+<style>
+    body {
+        margin: 0;
+        background-color: #000000;
+        font-family: "Courier New", monospace;
+        color: #c7f0ea;
+    }
+
+    .container {
+        display: flex;
+        height: 100vh;
+    }
+
+    .left-panel {
+        width: 60%;
+        padding: 40px;
+        border-right: 1px solid #2f5f5a;
+        overflow-y: auto;
+    }
+
+    .right-panel {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #050a0a;
+    }
+
+.photofit:hover {
+    filter: contrast(130%) brightness(80%);
+}
+
+.photo-wrapper {
+    text-align: center;
+}
+
+.photo-label {
+    margin-top: 10px;
+    font-size: 11px;
+    color: #5bbfb4;
+    letter-spacing: 1px;
+}
+
+.photo-placeholder {
+    width: 70%;
+    height: 70%;
+    border: 2px dashed #2f5f5a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden; 
+}
+
+.photofit {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+    h1 {
+        color: #7fded3;
+        font-size: 27px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #2f5f5a;
+        padding-bottom: 5px;
+    }
+
+    h2 {
+        color: #5bbfb4;
+        font-size: 22px;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 19px;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .tag {
+        color: #7fded3;
+        letter-spacing: 1px;
+    }
+
+    .header {
+        font-size: 18px;
+        color: #5bbfb4;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
+
+    .return-container {
+        margin-top: 40px;
+        border-top: 1px solid #2f5f5a;
+        padding-top: 20px;
+    }
+
+    .return-button {
+        display: inline-block;
+        padding: 10px 18px;
+        color: #7fded3;
+        text-decoration: none;
+        border: 1px solid #2f5f5a;
+        font-size: 13px;
+        letter-spacing: 1px;
+        transition: all 0.2s ease;
+    }
+
+    .return-button:hover {
+        background-color: #2f5f5a;
+        color: #000;
+    }
+
+/* ?? Comment section */
+.comments {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #2a2a2a;
+  font-family: "Courier New", monospace;
+}
+
+.comments-title {
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  opacity: 0.6;
+}
+
+/* Individual comments */
+.comment {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+/* Character colors */
+.comment.zeta {
+  color: #C24A00;
+}
+
+.comment.velvet {
+  color: #2F6F7A;
+}
+
+.comment.barbarian {
+  color: #6B0F1A;
+}
+
+.name {
+  font-weight: bold;
+}
+
+/* ??? Image inside comment */
+.comment-image {
+  display: block;
+  margin-top: 6px;
+  max-width: 220px;
+
+  /* THIS makes it inherit the character color */
+  border: 2px solid currentColor;
+
+  /* subtle styling */
+  background: #111;
+  padding: 3px;
+  opacity: 0.95;
+}
+
+/* optional: caption under image */
+.image-caption {
+  font-size: 11px;
+  opacity: 0.7;
+  margin-top: 2px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="left-panel">
+        <div class="header">[ CLASSIFIED FILE _INTERNAL ACCESS ONLY ]</div>
+
+        <h1>Eugene "Meridian" Burton</h1>
+        <p><span class="tag">Role:</span> Private operative, it seems...</p>
+
+        <h2>Physical / Presentation Notes</h2>
+        <p>— Masculine appearance; voice stable but... pretty quiet.</p>
+        <p>— Movements lack urgency even under fire</p>
+        <p>— Maintains posture of ritual readiness rather than combat readiness</p>
+        <p>— No visible hesitation when facing lethal threat. Although heaven knows there's something wrong with him.</p>
+
+        <h2>Behavioral Analysis</h2>
+        <p>
+        Demonstrates absolute faith in some divine plan, someone’s will, against which a person has no right to go.
+        </p>
+        <p>
+        He does not frame his actions as sacrifice or strategy. From all intercepted dialogue, subject is convinced that survival (his or others’) is a part of god's masterplan.
+        </p>
+        <p>
+        I spoke with him once. He describes death as a “necessary passage". Guess it's quite a pragmatic look at such thing. Well... If it helps him sleep at night, then... 'aight...
+        </p>
+
+        <h2>Psychological Markers</h2>
+        <p>— Some kind of religious fixation</p>
+        <p>— Dissociation from immediate physical danger</p>
+        <p>— Calm acceptance of death (not quite like mine, born of belief rather than disappointment)</p>
+        <p>— No detectable irony in self-perception</p>
+
+        <p>
+        Notably, subject shows genuine emotional engagement when discussing death with others - particularly those who display fear or uncertainty. Freakish, no?
+        </p>
+
+        <h2>EXTRAS</h2>
+        <p>— There is something unsettling about him. U ever had a feeling that there's something... Off? Sometimes when I watch mission footage, I notice him out of the corner of my eye. I swear to God, something's wrong with him. I always wonder what it is, but I can't figure it out. 
+He once asked me what I thought happened in the very last seconds. Not after, but during. I didn't answer. He looked disappointed. In a way, it's probably even brave. Although strange. He came to the front voluntarily; it's unlikely he dreamed he had to do this. So, is his possible death God's will or a step against it?.. Or is the front a choice, and death a destiny? His philosophy isn't entirely clear to me. Besides, my conversation with him wasn't... particularly pleasant for me. He talks about death as if it's structured. As if there's some kind of etiquette to dying in the dirt. As if death will be polite to him.</p>
+
+<!-- ?? COMMENT SECTION -->
+<div class="comments">
+
+  <div class="comments-title">USER REMARKS</div>
+
+  <!-- ZETA COMMENT WITH IMAGE -->
+  <div class="comment zeta">
+    <span class="name">Zeta:</span> it's not bravery, let's not romanticise it. Bravery implies awareness, but this is something else. Bet the dude thinks it's all god's will that he's still alive instead of thanking his comrades. <br>
+
+    <img src="zeta-note.jpg" class="comment-image">
+
+    <div class="image-caption">[attached file]</div>
+  </div>
+
+  <!-- ZETA COMMENT -->
+  <div class="comment zeta">
+    <span class="name">Zeta:</span> XXXXD
+  </div>
+
+  <!-- BARBARIAN COMMENT -->
+  <div class="comment barbarian">
+    <span class="name">Barbarian:</span> I'm not a priest tho. 
+  </div>
+
+  <!-- ZETA COMMENT -->
+  <div class="comment zeta">
+    <span class="name">Zeta:</span> OH MY GOD BARBARIAN WHO FUCKING CARES!!!!!11!!1!
+  </div>
+
+</div>
+
+        <div class="return-container">
+            <a href="bugs.html" class="return-button">< RETURN TO INDEX</a>
+        </div>
+    </div>
+
+<div class="photo-wrapper">
+    <img src="bug3_photofit.jpg" class="photofit">
+    <div class="photo-label">[ SUBJECT PHOTOFIT — ARCHIVAL ]</div>
+</div>
+
+</div>
+
+</body>
+</html>

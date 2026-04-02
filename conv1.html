@@ -72,7 +72,7 @@
       margin-left: 8px;
     }
 
-    /* 🔥 CLEAR SEPARATOR */
+    /* SEPARATOR */
     .separator {
       margin: 30px 0;
       text-align: center;
@@ -121,6 +121,52 @@
     .back-btn:hover {
       background: #003566;
     }
+
+/* ?? Comment section */
+.comments {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #2a2a2a;
+}
+
+.comments-title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  opacity: 0.6;
+}
+
+/* Base comment style (important!) */
+.comment {
+  margin: 8px 0;
+  font-size: 14px;
+  padding: 8px 10px;
+  border: 1px solid;
+  background: rgba(255,255,255,0.03); /* fallback */
+}
+
+/* ?? Character-specific styling */
+.comment.zane {
+  color: #C24A00;
+  border-color: #C24A00;
+  background: rgba(194,74,0,0.12);
+}
+
+.comment.brian {
+  color: #2F6F7A;
+  border-color: #2F6F7A;
+  background: rgba(47,111,122,0.12);
+}
+
+.comment.ivan {
+  color: #6B0F1A;
+  border-color: #6B0F1A;
+  background: rgba(107,15,26,0.15); 
+}
+
+.name {
+  font-weight: bold;
+}
   </style>
 </head>
 
@@ -165,6 +211,25 @@
     <div class="message zane">Zane <span class="time">09:15</span><br>yeah I'll tell him. Whatever, moron.</div>
 
   </div>
+
+<!-- ?? COMMENT SECTION -->
+<div class="comments">
+
+  <div class="comments-title">USER REMARKS</div>
+
+  <div class="comment zane">
+    <span class="name">Zeta:</span> oh look Velvet is acting like a kid!!!! Publicly!
+  </div>
+
+  <div class="comment brian">
+    <span class="name">Velvet:</span> u2 tbh ::::-/
+  </div>
+
+  <div class="comment zane">
+    <span class="name">Zeta:</span> oh shut it really
+  </div>
+
+</div>
 
   <button class="back-btn" onclick="goBack()">← Return</button>
 
