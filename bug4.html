@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CLASSIFIED DOSSIER</title>
+
+<style>
+body {
+    margin: 0;
+    background-color: #000;
+    font-family: "Courier New", monospace;
+    color: #d0d8df;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+* ?? Comment section */
+.comments {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #2a2a2a;
+  font-family: "Courier New", monospace;
+}
+
+.comments-title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  opacity: 0.6;
+}
+
+/* Individual comments */
+.comment {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+/* Character colors */
+.comment.zeta {
+  color: #C24A00;
+}
+
+.comment.velvet {
+  color: #2F6F7A;
+}
+
+.comment.barbarian {
+  color: #6B0F1A;
+}
+
+.name {
+  font-weight: bold;
+}
+
+/* ??? Image inside comment */
+.comment-image {
+  display: block;
+  margin-top: 6px;
+  max-width: 220px;
+
+  /* THIS makes it inherit the character color */
+  border: 2px solid currentColor;
+
+  /* subtle styling */
+  background: #111;
+  padding: 3px;
+  opacity: 0.95;
+}
+
+/* optional: caption under image */
+.image-caption {
+  font-size: 11px;
+  opacity: 0.7;
+  margin-top: 2px;
+}
+
+/* LEFT PANEL */
+.left-panel {
+    width: 60%;
+    padding: 40px;
+    border-right: 1px solid #3a4a57;
+    overflow-y: auto;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HEADER */
+.header {
+    font-size: 12px;
+    color: #7aa0b8;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* TEXT */
+h1 {
+    color: #9fc4da;
+    font-size: 22px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #3a4a57;
+    padding-bottom: 5px;
+}
+
+h2 {
+    color: #7aa0b8;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* CHARACTER COLOR */
+.kroker {
+    color: #5f7f93;
+}
+
+/* PHOTO FRAME */
+.photo-placeholder {
+    width: 300px;
+    height: 400px;
+    border: 2px dashed #3a4a57;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* PHOTO */
+.photofit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid currentColor;
+}
+
+/* RETURN BUTTON */
+.return-container {
+    margin-top: 40px;
+    border-top: 1px solid #3a4a57;
+    padding-top: 20px;
+}
+
+.return-button {
+    display: inline-block;
+    padding: 10px 18px;
+    color: #7aa0b8;
+    text-decoration: none;
+    border: 1px solid #3a4a57;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.return-button:hover {
+    background-color: #3a4a57;
+    color: #000;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+
+        <div class="header">[ CLASSIFIED FILE — INTERNAL ACCESS ONLY ]</div>
+
+        <h1>Daniel "Headhunter" Kroker</h1>
+        <p><span class="kroker">Role:</span> Operative / Tracker / Execution Specialist</p>
+
+        <h2>Physical / Presentation Notes</h2>
+        <p>— Medium height, lean build</p>
+        <p>— Shoulder-length blond hair, unkempt; frequently obscures facial expression</p>
+        <p>— Black tactical face paint during operations</p>
+        <p>— Movements controlled, deliberate; minimal wasted motion</p>
+        <p>— Maintains visual awareness patterns consistent with tracking behavior</p>
+
+        <h2>Behavioral Analysis</h2>
+        <p>
+        Kroker is logical, methodical, and emotionally restrained in outward presentation. However, underlying psychological dependency introduces instability under specific conditions.
+        </p>
+
+        <p>
+        Judging by the mission footages, he is one of those operatives... The barbarian calls them "Ram." Something like a punching force. He acts precisely, strictly, avoiding everything unnecessary, moving directly toward his goal.
+        </p>
+
+        <p>
+        He also maintains a strict internal framework for how operations should proceed. When reality deviates, he does not adapt fluidly—instead, he attempts to force alignment, which can result in momentary disorientation or escalation.
+        </p>
+
+        <p>
+        The same confusion can be achieved by cutting Kroker off from the rest of the squad. ;;;;-]
+        </p>
+
+        <h2>Psychological Markers</h2>
+        <p>— Core fear: isolation</p>
+        <p>— Attachment dependency</p>
+        <p>— Emotional suppression layered over instability</p>
+        <p>— Compensatory need for control and order</p>
+
+        <p>
+        Notable detail: For some reason, he keeps a photograph in his uniform pocket. Accounts of what it is vary, but he seems very protective of it.
+        </p>
+
+        <h2>Extras</h2>
+        <p>
+        No matter how reliable he is, all this remains so as long as he knows exactly where he's going. Or at least not exactly, but he knows.
+        </p>
+       <p>
+        I think if you closed his eyes and spun him around, he'd instantly lose it. And lose his composure. But getting him off track is, to put it mildly, not easy.
+        </p>
+
+        <p>
+        Firstly, he thinks through quite a lot of things. Secondly, he's incredibly assertive. Ironically, he seems driven by a single-minded hatred of his enemies.
+        </p>
+
+        <p>
+        Achieving his goals is the priority, and his enemies are obstacles to be eliminated.
+        </p>
+
+        <p>
+        If you hear someone shouting something to their comrades or to us on the battlefield, it means Daniel is one of them.
+        </p>
+
+        <p>
+        There's reason to believe he's only like this on the battlefield. The adrenaline must be hitting the boy hard in the head.
+        </p>
+
+        <p>
+        Predictable inputs > predictable outputs, eh?
+        </p>
+
+        <p>
+        He often works in conjunction with Ariel Hendrickson. It took us a shamefully long time to realize something was going on between the two of them.
+        </p>
+
+        <p>
+        In a way, they're counterbalances for each other. But that's not all. Daniel seems to be heavily dependent on Ariel.
+        </p>
+
+        <p>
+        Having his partner nearby seems to be part of any of his plans, so he becomes nervous and loses focus when Ariel moves away or goes out of sight during a mission.
+        </p>
+
+        <p>
+        So he's one of our two lovebirds. I bet that if one of them dies on a mission where they're working together, the other will collapse next to him and not move until he's finished off too XXXXD
+        </p>
+
+<!-- ?? COMMENT SECTION -->
+<div class="comments">
+
+  <div class="comments-title">USER REMARKS</div>
+
+  <!-- BARBARIAN COMMENT -->
+  <div class="comment barbarian">
+    <span class="name">Barbarian:</span> now it's clear.
+  </div>
+
+  <!-- VELVET COMMENT -->
+  <div class="comment velvet">
+    <span class="name">Velvet:</span> what?
+  </div>
+
+  <!-- BARBARIAN COMMENT -->
+  <div class="comment barbarian">
+    <span class="name">Barbarian:</span> Tim said he carries some kind of photo in his breast pocket. He seems to be very protective of this photo. I think it has something to do with Ariel.
+  </div>
+
+  <!-- ZETA COMMENT -->
+  <div class="comment zeta">
+    <span class="name">Zeta:</span> oh this is priceless
+  </div>
+
+</div>
+
+        <div class="return-container">
+            <a href="bugs.html" class="return-button">< RETURN TO INDEX</a>
+        </div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel">
+        <div class="photo-placeholder">
+            <img src="bug4_photofit.jpg" class="photofit">
+        </div>
+    </div>
+
+</div>
+
+<!-- IMAGE ZOOM OVERLAY -->
+<div id="imgOverlay" class="img-overlay" onclick="closeImage()">
+  <img id="overlayImg">
+</div>
+
+</body>
+</html>

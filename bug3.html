@@ -3,121 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <title>CLASSIFIED DOSSIER</title>
+
 <style>
-    body {
-        margin: 0;
-        background-color: #000000;
-        font-family: "Courier New", monospace;
-        color: #c7f0ea;
-    }
-
-    .container {
-        display: flex;
-        height: 100vh;
-    }
-
-    .left-panel {
-        width: 76%;
-        padding: 40px;
-        border-right: 1px solid #2f5f5a;
-        overflow-y: auto;
-    }
-
-    .right-panel {
-        width: 24%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #050a0a;
-    }
-
-.photofit:hover {
-    filter: contrast(130%) brightness(80%);
+body {
+    margin: 0;
+    background-color: #000;
+    font-family: "Courier New", monospace;
+    color: #c7f0ea;
 }
 
-.photo-wrapper {
-    text-align: center;
-}
-
-.photo-label {
-    margin-top: 10px;
-    font-size: 11px;
-    color: #5bbfb4;
-    letter-spacing: 1px;
-}
-
-.photo-placeholder {
-    width: 70%;
-    height: 70%;
-    border: 2px dashed #2f5f5a;
-
+.container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden; 
+    height: 100vh;
 }
-
-.photofit {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; 
-}
-
-    h1 {
-        color: #7fded3;
-        font-size: 27px;
-        margin-bottom: 10px;
-        border-bottom: 1px solid #2f5f5a;
-        padding-bottom: 5px;
-    }
-
-    h2 {
-        color: #5bbfb4;
-        font-size: 22px;
-        margin-top: 25px;
-        margin-bottom: 10px;
-    }
-
-    p {
-        font-size: 19px;
-        line-height: 1.6;
-        margin-bottom: 10px;
-    }
-
-    .tag {
-        color: #7fded3;
-        letter-spacing: 1px;
-    }
-
-    .header {
-        font-size: 18px;
-        color: #5bbfb4;
-        margin-bottom: 20px;
-        letter-spacing: 2px;
-    }
-
-    .return-container {
-        margin-top: 40px;
-        border-top: 1px solid #2f5f5a;
-        padding-top: 20px;
-    }
-
-    .return-button {
-        display: inline-block;
-        padding: 10px 18px;
-        color: #7fded3;
-        text-decoration: none;
-        border: 1px solid #2f5f5a;
-        font-size: 13px;
-        letter-spacing: 1px;
-        transition: all 0.2s ease;
-    }
-
-    .return-button:hover {
-        background-color: #2f5f5a;
-        color: #000;
-    }
 
 /* ?? Comment section */
 .comments {
@@ -128,7 +26,7 @@
 }
 
 .comments-title {
-  font-size: 17px;
+  font-size: 12px;
   letter-spacing: 2px;
   margin-bottom: 10px;
   opacity: 0.6;
@@ -137,7 +35,7 @@
 /* Individual comments */
 .comment {
   margin: 10px 0;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /* Character colors */
@@ -157,13 +55,13 @@
   font-weight: bold;
 }
 
-/*Image inside comment */
+/* ??? Image inside comment */
 .comment-image {
   display: block;
   margin-top: 6px;
-  max-width: 300px;
+  max-width: 220px;
 
-  /* inherit the character color */
+  /* THIS makes it inherit the character color */
   border: 2px solid currentColor;
 
   /* subtle styling */
@@ -179,17 +77,158 @@
   margin-top: 2px;
 }
 
+/* LEFT PANEL */
+.left-panel {
+    width: 60%;
+    padding: 40px;
+    border-right: 1px solid #2f5f5a;
+    overflow-y: auto;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HEADER */
+.header {
+    font-size: 12px;
+    color: #5bbfb4;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* TEXT */
+h1 {
+    color: #7fded3;
+    font-size: 22px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #2f5f5a;
+    padding-bottom: 5px;
+}
+
+h2 {
+    color: #5bbfb4;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* CHARACTER COLOR */
+.burton {
+    color: #2f5f5a;
+}
+
+/* PHOTO FRAME */
+.photo-placeholder {
+    width: 300px;
+    height: 400px;
+    border: 2px dashed #2f5f5a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* PHOTO */
+.photofit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid currentColor;
+}
+
+/* RETURN BUTTON */
+.return-container {
+    margin-top: 40px;
+    border-top: 1px solid #2f5f5a;
+    padding-top: 20px;
+}
+
+.return-button {
+    display: inline-block;
+    padding: 10px 18px;
+    color: #7fded3;
+    text-decoration: none;
+    border: 1px solid #2f5f5a;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.return-button:hover {
+    background-color: #2f5f5a;
+    color: #000;
+}
+
+/* overlay background */
+.img-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* zoomed image */
+.img-overlay img {
+  max-width: 80%;
+  max-height: 80%;
+  border: 3px solid #2f5f5a; /* matches your theme */
+}
+
+/* make comment images clickable */
+.comment-image {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.comment-image:hover {
+  transform: scale(1.05);
+}
+
+<script>
+function openImage(src) {
+  const overlay = document.getElementById("imgOverlay");
+  const img = document.getElementById("overlayImg");
+
+  img.src = src;
+  overlay.style.display = "flex";
+}
+
+function closeImage() {
+  document.getElementById("imgOverlay").style.display = "none";
+}
+</script>
+
 </style>
 </head>
+
 <body>
 
 <div class="container">
 
+    <!-- LEFT PANEL -->
     <div class="left-panel">
-        <div class="header">[ CLASSIFIED FILE _INTERNAL ACCESS ONLY ]</div>
+
+        <div class="header">[ CLASSIFIED FILE — INTERNAL ACCESS ONLY ]</div>
 
         <h1>Eugene "Meridian" Burton</h1>
-        <p><span class="tag">Role:</span> Private operative, it seems...</p>
+        <p><span class="kroker">Role:</span> Private operative, it seems...</p>
 
         <h2>Physical / Presentation Notes</h2>
         <p>— Masculine appearance; voice stable but... pretty quiet.</p>
@@ -215,12 +254,37 @@
         <p>— No detectable irony in self-perception</p>
 
         <p>
-        Notably, subject shows genuine emotional engagement when discussing death with others - particularly those who display fear or uncertainty. Freakish, no?
+        Notably, subject shows genuine emotional engagement when discussing death with others—particularly those who display fear or uncertainty. Freakish, no?
         </p>
 
-        <h2>EXTRAS</h2>
-        <p>— There is something unsettling about him. U ever had a feeling that there's something... Off? Sometimes when I watch mission footage, I notice him out of the corner of my eye. I swear to God, something's wrong with him. I always wonder what it is, but I can't figure it out. 
-He once asked me what I thought happened in the very last seconds. Not after, but during. I didn't answer. He looked disappointed. In a way, it's probably even brave. Although strange. He came to the front voluntarily; it's unlikely he dreamed he had to do this. So, is his possible death God's will or a step against it?.. Or is the front a choice, and death a destiny? His philosophy isn't entirely clear to me. Besides, my conversation with him wasn't... particularly pleasant for me. He talks about death as if it's structured. As if there's some kind of etiquette to dying in the dirt. As if death will be polite to him.</p>
+       <h2>Extras</h2>
+<p>
+There is something unsettling about him. U ever had a feeling that there's something... Off? Sometimes when I observe mission footage, I notice him maintaining position just at the edge of perception. Not overtly unusual—until you focus on it. Then it becomes difficult to ignore.
+</p>
+
+<p>
+I swear to God, something's wrong with him. I always wonder what it is, but I can't quite isolate the cause. His behavior remains consistent, yet the sense of deviation persists.
+</p>
+
+<p>
+He once asked what I thought happens in the very last seconds. Not after—but during. I did not respond. He appeared... dissatisfied with that.
+</p>
+
+<p>
+In a way, that question implies a certain acceptance. Perhaps even bravery. Though it is difficult to separate that from his overall detachment. He volunteered for front-line deployment; unlikely he was unaware of the implications.
+</p>
+
+<p>
+So the question remains: is his potential death part of some larger framework, or simply a consequence of his chosen path?.. Or is the front a decision, and death the inevitable outcome?
+</p>
+
+<p>
+His philosophy is not entirely clear. Our conversation did not leave a favorable impression. He speaks of death as though it follows structure. As though there is a correct manner to approach it.
+</p>
+
+<p>
+As though death itself adheres to protocol—and, somehow, will comply with him.
+</p>
 
 <!-- ?? COMMENT SECTION -->
 <div class="comments">
@@ -231,7 +295,9 @@ He once asked me what I thought happened in the very last seconds. Not after, bu
   <div class="comment zeta">
     <span class="name">Zeta:</span> it's not bravery, let's not romanticise it. Bravery implies awareness, but this is something else. Bet the dude thinks it's all god's will that he's still alive instead of thanking his comrades. <br>
 
-    <img src="zeta-note.jpg" class="comment-image">
+    <img src="zeta-note.jpg" 
+     class="comment-image" 
+     onclick="openImage('zeta-note.jpg'')">
 
     <div class="image-caption">[attached file]</div>
   </div>
@@ -256,13 +322,21 @@ He once asked me what I thought happened in the very last seconds. Not after, bu
         <div class="return-container">
             <a href="bugs.html" class="return-button">< RETURN TO INDEX</a>
         </div>
+
     </div>
 
-<div class="photo-wrapper">
-    <img src="bug3_photofit.jpg" class="photofit">
-    <div class="photo-label">[ SUBJECT PHOTOFIT — ARCHIVAL ]</div>
+    <!-- RIGHT PANEL -->
+    <div class="right-panel">
+        <div class="photo-placeholder">
+            <img src="bug3_photofit.jpg" class="photofit">
+        </div>
+    </div>
+
 </div>
 
+<!-- IMAGE ZOOM OVERLAY -->
+<div id="imgOverlay" class="img-overlay" onclick="closeImage()">
+  <img id="overlayImg">
 </div>
 
 </body>
